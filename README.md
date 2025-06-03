@@ -70,7 +70,7 @@ python app.py / run in the IDE normally
 * Password: a secure DB password
 * Save the `Project URL` (from API Docs) and `anon/public` in the **.env file in the back-end** ( in Project Settings -> API Keys
 
-### 4. Create `users` Table
+### 4. Create `user` Table
 
 Navigate to **Table Editor** and click **"Create Table"**:
 
@@ -90,7 +90,7 @@ Navigate to **Table Editor** and click **"Create Table"**:
 | completed_lessons  | text      | '{}'::text[]                              |
 
 
-> Leave RLS enabled on the `users` table.
+> Leave RLS enabled on the `user` table.
 
 ---
 
