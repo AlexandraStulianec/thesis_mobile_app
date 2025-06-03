@@ -186,9 +186,7 @@ npm run android
 
 ### Front-end:
 
-ensure that in package.json at this part you have the path where the project is
-"jest": {
-    "preset": "jest-expo",
+> ensure that in **package.json** at the **jest** part you have the path where the project is for the setup jest file, otherwise the tests will not work/pass
     "setupFiles": [
       "D:/ReactProjects/frontend/jest.setup.js" 
       ]
