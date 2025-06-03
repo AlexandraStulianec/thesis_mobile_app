@@ -169,15 +169,17 @@ flask run
 cd frontend
 npx expo start
 
---- scan the code if you install the Expo Go App or after loading open the emulator in Android Studio and type
+--- scan the code if you install the Expo Go App or, after loading, open the emulator in Android Studio and type
 
 a
 
---- or write
+--- Another way is to type this command instead of the previous
 
 npm run android
 
-(! be sure to have an Android SDK installed on the computer to run the project on an emulator) 
+---to have it open in Android Studio
+
+(!be sure to have an Android SDK installed on the computer to run the project on an emulator) 
 ```
 
 ---
