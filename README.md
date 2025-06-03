@@ -45,7 +45,7 @@ npx expo start
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate (ex for Windows to run in VSCode: d:/backend/.venv/Scripts/python.exe d:/backend/app.py)
 pip install -r requirements.txt
 python app.py / run in the IDE normally
 ```
