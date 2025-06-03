@@ -17,7 +17,7 @@ MathTutor is a cross-platform mobile app designed to help high school students m
 
 ---
 
-## 🚀 Features
+## Features
 
 - Custom math exercises with AI-powered explanations
 - “Explain My Mistake” feature using GPT-3.5 Turbo
