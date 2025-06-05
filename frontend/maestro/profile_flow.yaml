@@ -1,0 +1,8 @@
+appId: com.anonymous.frontend
+---
+- tapOn: ", Profile"
+- tapOn: "Privacy"
+- tapOn: "Enter new name"
+- inputText: "Deea"
+- tapOn: "Save"
+- tapOn: ", Profile"

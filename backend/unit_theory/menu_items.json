@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "UNIT 1",
+    "description": "Basics of and Operations with Limits"
+  },
+  {
+    "id": 2,
+    "title": "UNIT 2",
+    "description": "Elementary Limit Functions I"
+  },
+  {
+    "id": 3,
+    "title": "UNIT 3",
+    "description": "Elementary Limit Functions II"
+  }
+]

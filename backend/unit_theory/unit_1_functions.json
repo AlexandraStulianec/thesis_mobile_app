@@ -1,0 +1,27 @@
+[
+  {
+    "title": "We use limits to describe how a function behaves as its input approaches a certain value.",
+    "equation": "\\[\\lim_{{x \\to a}} f(x) = L\\]",
+    "example": "\\[ \\lim_{{x \\to 2}} (3x + 1) = 6 + 1 = 7\\]"
+  },
+  {
+    "title": "Sum Rule",
+    "equation": "\\[ \\lim_{{x \\to a}} [f(x) + g(x)] = \\lim_{{x \\to a}} f(x) + \\lim_{{x \\to a}} g(x) \\]",
+    "example": "\\[ \\lim_{{x \\to 3}} [(x + 1) + (2x - 1)] = 4 + 5 = 9 \\]"
+  },
+  {
+    "title": "Product Rule",
+    "equation": "\\[ \\lim_{{x \\to a}} [f(x) \\cdot g(x)] = \\lim_{{x \\to a}} f(x) \\cdot \\lim_{{x \\to a}} g(x) \\]",
+    "example": "\\[ \\lim_{{x \\to 1}} (x \\cdot (x + 2)) = 1\\cdot(1+2) = 3 \\]"
+  },
+  {
+    "title": "Quotient Rule",
+    "equation": "\\[ \\lim_{{x \\to a}} \\frac{f(x)}{g(x)} = \\frac{\\lim_{{x \\to a}} f(x)}{\\lim_{{x \\to a}} g(x)}, \\text{ if } \\lim_{{x \\to a}} g(x) \\neq 0 \\]",
+    "example": "\\[ \\lim_{{x \\to 2}} \\frac{x^2 + x}{2x - 1} = \\frac{2^2+2}{2\\cdot2-1} = 2 \\]"
+  },
+  {
+    "title": "Power Rule",
+    "equation": "\\[ \\lim_{{x \\to a}} [f(x)]^n = \\big[\\lim_{{x \\to a}} f(x)\\big]^n \\]",
+    "example": "\\[ \\lim_{{x \\to 2}} (x^3) = 8 \\]"
+  }
+]

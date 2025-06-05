@@ -1,0 +1,15 @@
+appId: com.anonymous.frontend
+---
+- tapOn: "LET'S GO"
+- tapOn: "Name"
+- inputText: "Maria"
+- tapOn: "Email"
+- inputText: "maria@gmail.com"
+- tapOn: "Password"
+- inputText: "maria"
+- tapOn: "CREATE ACCOUNT"
+- tapOn: "Email"
+- inputText: "maria@gmail.com"
+- tapOn: "Password"
+- inputText: "maria"
+- tapOn: "LOG IN"

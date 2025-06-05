@@ -1,0 +1,12 @@
+appId: com.anonymous.frontend
+---
+- tapOn: ", Menu"
+- tapOn:
+    point: "50%,31%"
+- tapOn: "Basics of Limits I"
+- assertVisible: "Enter your answer"
+- tapOn: "Enter your answer"
+- inputText: 10
+- tapOn: "CHECK"
+- tapOn: "Explain My Mistake"
+- tapOn: "Next Exercise"

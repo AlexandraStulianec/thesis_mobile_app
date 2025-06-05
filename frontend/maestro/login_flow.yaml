@@ -1,0 +1,10 @@
+appId: com.anonymous.frontend
+---
+- tapOn: "Expo Go"
+- tapOn: "frontend"
+- tapOn: "LOG IN"
+- tapOn: "Email"
+- inputText: "deea@gmail.com"
+- tapOn: "Password"
+- inputText: "deea"
+- tapOn: "LOG IN"

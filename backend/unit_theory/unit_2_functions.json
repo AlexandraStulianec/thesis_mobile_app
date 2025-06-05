@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Constant Function",
+    "equation": "\\[\\lim_{{x \\to a}} c = c\\]",
+    "example": "\\[\\lim_{{x \\to 3}} 5 = 5\\]"
+  },
+  {
+    "title": "Polinomial Function",
+    "equation": "\\[\\lim_{{x \\to a}} x^n +... + x^2 + x + 1 = a^n + ...+ a^2 + a + 1\\]",
+    "example": "\\[\\lim_{{x \\to 2}} x^3 = 2^3 = 8\\]"
+  },
+  {
+    "title": "Rational Function",
+    "equation": "\\[\\lim_{{x \\to a}} \\frac{x^n +... + x^2 + x + 1}{x^m +... + x^2 + x + 1}\\], ",
+    "example": "\\[\\lim_{{x \\to 2}} \\frac{x^3}{x^2-1} = \\frac{2^3}{2^2-1} = \\frac{8}{3}\\]"
+  },
+  {
+    "title": "Power Function",
+    "equation": "\\[\\lim_{{x \\to a}} x^n = a^n \\]",
+    "example": "\\[\\lim_{{x \\to 2}} x^3 = 2^3 = 8\\]"
+  }
+]

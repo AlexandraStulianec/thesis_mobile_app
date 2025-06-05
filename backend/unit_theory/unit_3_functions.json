@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Root Function",
+    "equation": "\\[\\lim_{{x \\to a}} \\sqrt[n]{x} = \\sqrt[n]{a}\\]",
+    "example": "\\[\\lim_{{x \\to 2}} x^3 = 2^3 = 8\\]"
+  },
+  {
+    "title": "Exponential Function",
+    "equation": "\\[\\lim_{{x \\to a}} b^x = b^a, \\text{where} b > 0, b \\neq 1\\]",
+    "example": "\\[\\lim_{{x \\to 1}} 2^{1-2x} = 2^{-1} = \\frac{1}{2}\\]"
+  },
+  {
+    "title": "Logarithmic Function",
+    "equation": "\\[\\lim_{{x \\to a}} \\log_bx = \\log_ba \\]",
+    "example": "\\[\\lim_{{x \\to 1}} \\ln(x) = \\ln(1) = 0\\]"
+  },
+  {
+    "title": "Trigonometric Function - with sin, cos, tg, ctg and their inverses (don't forget about conditions)",
+    "equation": "\\[\\lim_{{x \\to a}} \\sin(x) = \\sin(a)\\]",
+    "example": "\\[ \\lim_{{x \\to 0}} \\sin(x) = 0\\]"
+  }
+]

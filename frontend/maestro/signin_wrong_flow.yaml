@@ -1,0 +1,17 @@
+appId: com.anonymous.frontend
+---
+- tapOn: "LET'S GO"
+- tapOn: "Name"
+- inputText: "Lex"
+- tapOn: "Email"
+- inputText: "Lex"
+- tapOn: "CREATE ACCOUNT"
+- assertVisible: "All fields are required"
+- tapOn: "Password"
+- inputText: "Lex"
+- tapOn: "CREATE ACCOUNT"
+- assertVisible: "Please enter a valid email address"
+- tapOn: "Email"
+- eraseText
+- inputText: "lex@gmail.com"
+- tapOn: "CREATE ACCOUNT"

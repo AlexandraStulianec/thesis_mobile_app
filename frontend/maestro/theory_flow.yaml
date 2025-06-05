@@ -1,0 +1,6 @@
+appId: com.anonymous.frontend
+---
+- tapOn: ", Menu"
+- tapOn:
+    point: "50%,31%"
+- tapOn: "TH"

@@ -1,0 +1,11 @@
+appId: com.anonymous.frontend
+---
+- tapOn: "LOG IN"
+- tapOn: "Email"
+- inputText: "deea@gmail.com"
+- tapOn: "LOG IN"
+- assertVisible: "Email and password are required"
+- tapOn: "Password"
+- inputText: "ale"
+- tapOn: "LOG IN"
+- assertVisible: "Invalid credentials"

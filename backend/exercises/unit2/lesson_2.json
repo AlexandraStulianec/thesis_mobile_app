@@ -1,0 +1,43 @@
+{
+  "unit_id": 2,
+  "lesson_id": 2,
+  "title": "Elementary Limits II",
+  "exercises": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "function_type": "polynomial",
+      "degree": 2,
+      "x_value": 1
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "function_type": "fraction",
+      "degree_num": 2,
+      "degree_den": 2,
+      "x_value": 1
+    },
+    {
+      "id": 3,
+      "type": "find_limit",
+      "function_type": "log",
+      "degree": 2,
+      "x_value": 2
+    },
+    {
+      "id": 4,
+      "type": "find_limit",
+      "function_type": "exp",
+      "degree": 2,
+      "x_value": 1
+    },
+    {
+      "id": 5,
+      "type": "find_limit",
+      "function_type": "exp",
+      "degree": 3,
+      "x_value": 3
+    }
+  ]
+}
