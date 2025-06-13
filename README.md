@@ -188,8 +188,8 @@ a
 
 npm run android
 ```
-> Ensure you have an Android SDK installed on the computer to run the project on an emulator
-> Tu run the front-end with the back-end you need to change the **API_URL** in the handler files in the folder **api**
+> Ensure you have an Android SDK installed on the computer to run the project on an emulator. 
+> To run the front-end with the back-end you need to change the **API_URL** in the handler files in the folder **api**.
 
 ---
 
