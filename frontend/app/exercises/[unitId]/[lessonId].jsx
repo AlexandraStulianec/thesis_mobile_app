@@ -74,15 +74,57 @@ export default function ExerciseScreen() {
     setIsAnswerSelected(text.trim().length > 0);
   };
 
+  function parseFraction(str) {
+    if (typeof str !== "string") return NaN;
+    const [num, den] = str.split("/").map(Number);
+    if (!isNaN(num) && !isNaN(den) && den !== 0) {
+      return num / den;
+    }
+    return NaN;
+  }
+
   // Validate user answer against correct solution
   const handleCheckAnswer = (selectedAnswer = null) => {
     if (!isAnswerSelected) return;
 
-    const correct = currentExercise.correct_answer;
+    // const correct = currentExercise.correct_answer;
+    // let isAnswerCorrect = false;
+
+    // if (currentExercise.answer_type === "text") {
+    //   isAnswerCorrect = parseFloat(userAnswer.trim()) === parseFloat(correct);
+    // } else if (currentExercise.answer_type === "multiple_choice") {
+    //   isAnswerCorrect =
+    //     String(selectedAnswer).trim() === String(correct).trim();
+    // }
+
+    const correct = String(currentExercise.correct_answer).trim();
+    const answer = String(userAnswer).trim();
     let isAnswerCorrect = false;
 
     if (currentExercise.answer_type === "text") {
-      isAnswerCorrect = parseFloat(userAnswer.trim()) === parseFloat(correct);
+      // Case 1: Infinity answers
+      if (
+        correct === "inf" ||
+        correct === "-inf" ||
+        correct === "-Inf" ||
+        correct === "Inf"
+      ) {
+        isAnswerCorrect = answer.toLowerCase() === correct.toLowerCase();
+      }
+      // Case 2: Fraction answers
+      else if (answer.includes("/") && correct.includes("/")) {
+        const parsedUser = parseFraction(answer);
+        const parsedCorrect = parseFraction(correct);
+        if (!isNaN(parsedUser) && !isNaN(parsedCorrect)) {
+          isAnswerCorrect = parsedUser === parsedCorrect;
+        } else {
+          isAnswerCorrect = answer === correct; // fallback to string
+        }
+      }
+      // Case 3: Number answers
+      else {
+        isAnswerCorrect = parseFloat(userAnswer.trim()) === parseFloat(correct);
+      }
     } else if (currentExercise.answer_type === "multiple_choice") {
       isAnswerCorrect =
         String(selectedAnswer).trim() === String(correct).trim();
@@ -260,9 +302,20 @@ export default function ExerciseScreen() {
                 </Text>
 
                 {mistakeExplanation ? (
-                  <Text style={styles.explanationText}>
-                    {mistakeExplanation}
-                  </Text>
+                  <>
+                    <Text style={styles.explanationText}>
+                      {mistakeExplanation}
+                    </Text>
+                    {/* Always allow asking again */}
+                    <Pressable
+                      style={styles.explainButton}
+                      onPress={handleExplainMistake}
+                    >
+                      <Text style={styles.explainButtonText}>
+                        Explain Again
+                      </Text>
+                    </Pressable>
+                  </>
                 ) : (
                   <Pressable
                     style={styles.explainButton}
@@ -424,6 +477,11 @@ function createStyles(theme) {
       marginTop: 10,
     },
 
+    explainButtonText: {
+      color: "black",
+      fontSize: 16,
+    },
+
     nextButton: {
       backgroundColor: "green",
       padding: 10,
@@ -433,7 +491,7 @@ function createStyles(theme) {
 
     nextButtonText: {
       color: "white",
-      fontSize: 18,
+      fontSize: 16,
     },
   });
 }

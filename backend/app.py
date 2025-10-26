@@ -326,7 +326,11 @@ def explain_mistake():
     x_value = data.get("x_value")
 
     # Validate required fields
-    if not question or not x_value or not expression or not user_answer or not correct_answer:
+    # if not question or not x_value or not expression or not user_answer or not correct_answer:
+    #     return jsonify({"error": "Missing data"}), 400
+
+    required_fields = [question, expression, user_answer, correct_answer, x_value]
+    if any(v is None for v in required_fields):
         return jsonify({"error": "Missing data"}), 400
 
     explanation = generate_explanation(question, expression, user_answer, correct_answer, x_value)

@@ -33,8 +33,8 @@ def generate_explanation(question, expression, user_answer, correct_answer, x_va
              "content": prompt
             }
         ],
-        temperature=0.7, # Balance creativity and focus
-        max_tokens=250  # Limit response length
+        temperature=0.0, # Rational response
+        max_tokens=300  # Limit response length
     )
 
     # Extract and return the generated text content
