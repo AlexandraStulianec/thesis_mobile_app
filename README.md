@@ -1,55 +1,66 @@
 
-# MathTutor – AI-Powered Educational Mobile App
+# MathTutor – AI-Powered Educational Mobile Application
 
-MathTutor is a cross-platform mobile app designed to help high school students master mathematical concepts like **Limits of Functions** through theory, interactive exercises, personalized feedback, and gamified learning. It integrates **AI explanations** using GPT-3.5 Turbo and stores user data securely in **Supabase**.
+MathTutor is a cross-platform mobile application designed to help high school students in 11th grade understand mathematical concepts in **Limits of Functions** through theory, interactive exercises, personalized feedback, and gamified learning. It integrates **AI explanations** using GPT-3.5 Turbo and stores user data securely in **Supabase**.
 
 ---
 
 ## Tech Stack
 
-- **Frontend**: React Native (with Expo)
-- **Backend**: Flask (Python)
+- **Front-end**: React Native (with Expo)
+- **Back-end**: Flask (Python)
 - **Database**: Supabase (PostgreSQL)
 - **AI Engine**: OpenAI GPT-3.5 Turbo
-- **Authentication**: Supabase Auth with JWT
+- **Authentication**: Supabase Auth with back-end JWT
 - **E2E Testing**: Maestro
-- **Unit Testing**: Pytest (Flask), Jest (React Native)
+- **Automated Testing**: Pytest (Flask), Jest (React Native)
 
 ---
 
 ## Features
 
-- Custom math exercises with AI-powered explanations
+- Unit-Based structure, where the content is structured into 3 units, divided into theory and practice with 5 exercise lessons/unit.
+- Custom math exercises using polynomial as a base with AI-powered explanations
 - “Explain My Mistake” feature using GPT-3.5 Turbo
-- XP system, lives (hearts), and gamified lesson progression
+- Point-based (XP) system, lives (hearts), and gamified lesson progression
 - Authentication with Supabase (email, password)
 - Progress tracking per unit and lesson
-
 ---
 
 ## Installation Guide
 
-### Front-end (React Native)
+### Front-end Setup (React Native)
+
+#### Prerequisites
+- Node.js (>= 16)
+- npm or yarn
+- Expo CLI 
+
+#### Install
 
 ```bash
-git clone
 cd frontend
 npm install
-npx expo start
+# or
+yarn install
 ````
-
-> Ensure you have Node.js and Expo CLI installed globally.
+> Ensure you have Node.js and Expo CLI (`npm install -g expo-cli`) installed globally.
 
 ### Back-end (Flask)
+
+#### Prerequisites
+- Python
+- pip
+
+#### Install
 
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate (ex for Windows to run in VSCode: d:/backend/.venv/Scripts/python.exe d:/backend/app.py)
+source venv/bin/activate  # (Linux/macOS)
+venv\Scripts\activate     # (Windows)
 pip install -r requirements.txt
-python app.py / run in the IDE normally
 ```
-
 ---
 
 ## Supabase Setup
@@ -68,7 +79,7 @@ python app.py / run in the IDE normally
 
 * Name: `MathTutor`
 * Password: a secure DB password
-* Save the `Project URL` (from API Docs) and `anon/public` in the **.env file in the back-end** ( in Project Settings -> API Keys
+* Save the `Project URL` (from API Docs) and `service-role/secret` in the **.env file in the back-end** (in Project Settings -> API Keys)
 
 ### 4. Create `user` Table
 
@@ -89,9 +100,7 @@ Navigate to **Table Editor** and click **"Create Table"**:
 | password_hash      | text      | null                                      |
 | completed_lessons  | text      | '{}'::text[]                              |
 
-
 > Leave RLS enabled on the `user` table.
-
 ---
 
 ## OpenAI GPT-3.5 Turbo Setup
@@ -114,7 +123,6 @@ Navigate to **Table Editor** and click **"Create Table"**:
 * Click **Create new secret key**
 * Name it (e.g., `MathTutorKey`)
 * Copy it immediately and save it securely, leave all permissions
-
 ---
 
 ## Environment Variables
@@ -138,17 +146,17 @@ MathTutor/
   │   ├── context/             # AppContext with signin/signup, etc
   │   ├── (auth)/              # All auth screens
   │   ├── (tabs)/              # All tab screens 
-  │   ├── exercises /          # All exercises screens 
-  │   ├── api /              # API handlers
-│   ├── components/          # Custom UI components
-  │   ├── __mocks__ /        # Mocks for testing
-  │   ├── __tests__ /        # Tests
-│   ├── maestro/             # E2E Maestro flows
-├── backend/                 # Flask backend
-│   ├── app.py               # Main entry point
-│   ├── auth.py              # Signup/Login logic
-│   ├── ai.py                # OpenAI integration
-│   ├── database_handler.py  # Supabase DB logic
+  │   ├── exercises /          # All exercise screens 
+  │   ├── api /                # API handlers
+│   ├── components/            # Custom UI components
+  │   ├── __mocks__ /          # Mocks for testing
+  │   ├── __tests__ /          # Tests
+│   ├── maestro/               # E2E Maestro flows
+├── backend/                   # Flask backend
+│   ├── app.py                 # Main entry point - Signup/Login logic and the rest
+│   ├── exercises.py           # Generation of exercises
+│   ├── ai.py                  # OpenAI integration
+│   ├── fetch.py               # Fetch Data from JSON files
 ├── README.md
 ```
 
@@ -161,6 +169,9 @@ MathTutor/
 ```bash
 cd backend
 flask run
+# or
+python app.py
+# or run in the IDE normally (ex for Windows to run in VSCode: d:/backend/.venv/Scripts/python.exe d:/backend/app.py)
 ```
 
 ### Start Front-end:
@@ -169,18 +180,16 @@ flask run
 cd frontend
 npx expo start
 
---- scan the code if you install the Expo Go App or, after loading, open the emulator in Android Studio and type
+# scan the code if you install the Expo Go App or, after loading, open the emulator in Android Studio and type
 
 a
 
---- Another way is to type this command instead of the previous
+# Another way is to type this command instead of the previous to have it open in Android Studio or just open the emulator without the application
 
 npm run android
-
----to have it open in Android Studio
-
-(!be sure to have an Android SDK installed on the computer to run the project on an emulator) 
 ```
+> Ensure you have an Android SDK installed on the computer to run the project on an emulator. 
+> To run the front-end with the back-end you need to change the **API_URL** in the handler files in the folder **api**.
 
 ---
 
@@ -211,7 +220,5 @@ maestro test maestro/login_flow.yaml
 ---
 
 ## Notes
-
 * Ensure CORS is enabled in your Flask backend.
-
 ---
