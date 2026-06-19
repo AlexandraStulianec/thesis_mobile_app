@@ -16,7 +16,6 @@ load_dotenv()
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-
 JWT_SECRET = os.getenv("JWT_SECRET")
 TOKEN_EXPIRATION_HOURS=2
 
@@ -99,36 +98,38 @@ def generate_exercises():
             with open(file_path, "r") as file:
                 lesson_data = json.load(file)
 
-            title = lesson_data.get("title")
-            exercises = []
-            for ex in lesson_data["exercises"]:
-                latex_expr, correct_answer = calculate_limit(
-                    ex["function_type"], ex["x_value"],
-                    ex.get("degree", 2), ex.get("degree_den", 1)
-                )
+            # title = lesson_data.get("title")
+            # exercises = []
+            # for ex in lesson_data["exercises"]:
+            #     latex_expr, correct_answer = calculate_limit(
+            #         ex["function_type"], ex["x_value"],
+            #         ex.get("degree", 2), ex.get("degree_den", 1)
+            #     )
 
-                question = "What is the limit of?"
-                answer_type = "text"
-                if ex["type"] == "multiple_choice":
-                    choices = generate_multiple_choice(correct_answer)
-                    answer_type = "multiple_choice"
-                else:
-                    choices = []
+            #     question = "What is the limit of?"
+            #     answer_type = "text"
+            #     if ex["type"] == "multiple_choice":
+            #         choices = generate_multiple_choice(correct_answer)
+            #         answer_type = "multiple_choice"
+            #     else:
+            #         choices = []
 
-                # Prepare the exercise data
-                exercise_data = {
-                    "id": ex["id"],
-                    "question": question,
-                    "expression": latex_expr,
-                    "answer_type": answer_type,
-                    "correct_answer": correct_answer,
-                    "choices": choices,
-                    "x_value": ex["x_value"]
-                }
+            #     # Prepare the exercise data
+            #     exercise_data = {
+            #         "id": ex["id"],
+            #         "question": question,
+            #         "expression": latex_expr,
+            #         "answer_type": answer_type,
+            #         "correct_answer": correct_answer,
+            #         "choices": choices,
+            #         "x_value": ex["x_value"]
+            #     }
 
-                exercises.append(exercise_data)
+            #     exercises.append(exercise_data)
 
-            return jsonify({"unit": unit_id, "lesson": lesson_id, "title": title, "exercises": exercises})
+            return jsonify(lesson_data), 200
+
+            #return jsonify({"unit": unit_id, "lesson": lesson_id, "title": title, "exercises": exercises})
 
         # If lesson_id is not provided, return a list of lessons in the unit
         else:
@@ -325,7 +326,7 @@ def explain_mistake():
     correct_answer = data.get("correct_answer")
     x_value = data.get("x_value")
 
-    # Validate required fields
+    # # Validate required fields
     # if not question or not x_value or not expression or not user_answer or not correct_answer:
     #     return jsonify({"error": "Missing data"}), 400
 
