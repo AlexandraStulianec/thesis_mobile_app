@@ -1,0 +1,97 @@
+{
+  "unit_id": 4,
+  "lesson_id": 3,
+  "title": "Case 0*inf",
+  "exercises": [
+    {
+      "id": 1,
+      "question": "What is the limit of?",
+      "expression": "x \\cdot \\sin \\frac{\\pi}{2x}",
+      "answer_type": "text",
+      "correct_answer": "\\pi/2",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 2,
+      "question": "What is the limit of?",
+      "expression": "\\sqrt{x} \\cdot \\tan \\frac{\\pi}{\\sqrt{x+2}}",
+      "answer_type": "text",
+      "correct_answer": "\\pi",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 3,
+      "question": "What is the limit of?",
+      "expression": "\\sqrt{x} \\cdot \\sin \\frac{\\pi}{x}",
+      "answer_type": "text",
+      "correct_answer": 0,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 4,
+      "question": "What is the limit of?",
+      "expression": "x^2 \\cdot \\arcsin \\frac{1}{3x^2 + 4}",
+      "answer_type": "text",
+      "correct_answer": "1/3",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 5,
+      "question": "What is the limit of?",
+      "expression": "e^{-x} (x - 4 \\sin x)",
+      "answer_type": "text",
+      "correct_answer": 0,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 6,
+      "question": "What is the limit of?",
+      "expression": "x \\arcsin \\frac{1}{x} - \\arctan \\frac{2}{x}",
+      "answer_type": "text",
+      "correct_answer": -1,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 7,
+      "question": "What is the limit of?",
+      "expression": "\\frac{x}{2} \\arcsin \\frac{3}{2x}",
+      "answer_type": "text",
+      "correct_answer": "3/4",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 8,
+      "question": "What is the limit of?",
+      "expression": "x \\cdot ( \\frac{\\pi}{4} - \\arctan \\frac{x}{x+1})",
+      "answer_type": "text",
+      "correct_answer": "1/2",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 9,
+      "question": "What is the limit of?",
+      "expression": "x^2 \\left( \\sin \\frac{\\pi}{x} - \\sin \\frac{\\pi}{x+1} \\right)",
+      "answer_type": "text",
+      "correct_answer": "\\pi",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 10,
+      "question": "What is the limit of?",
+      "expression": "\\arctan \\frac{1}{x} (x - \\sin x \\cdot \\ln x)",
+      "answer_type": "text",
+      "correct_answer": 1,
+      "choices": [],
+      "x_value": "\\infty"
+    }
+  ]
+}

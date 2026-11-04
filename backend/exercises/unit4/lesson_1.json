@@ -1,0 +1,97 @@
+{
+  "unit_id": 4,
+  "lesson_id": 1,
+  "title": "Case inf/inf",
+  "exercises": [
+    {
+      "id": 1,
+      "question": "What is the limit of?",
+      "expression": "\\frac{2x^3 - 1}{x^2 + x - 1}",
+      "answer_type": "text",
+      "correct_answer": "inf",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 2,
+      "question": "What is the limit of?",
+      "expression": "\\frac{(2x^2 - 1)(3 - x)}{(5x^2 + 1)(x + 2)}",
+      "answer_type": "text",
+      "correct_answer": "-2/5",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 3,
+      "question": "What is the limit of?",
+      "expression": "\\frac{3x^5 - 1}{x^2 + 1}",
+      "answer_type": "text",
+      "correct_answer": "inf",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 4,
+      "question": "What is the limit of?",
+      "expression": "\\frac{64 - x^2}{x^2 - 8x}",
+      "answer_type": "text",
+      "correct_answer": -1,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 5,
+      "question": "What is the limit of?",
+      "expression": "\\frac{x(x + 1)(2x + 3)}{27x^3 - 1}",
+      "answer_type": "text",
+      "correct_answer": "2/27",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 6,
+      "question": "What is the limit of?",
+      "expression": "\\frac{x - \\sin x}{x - \\cos x}",
+      "answer_type": "text",
+      "correct_answer": 1,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 7,
+      "question": "What is the limit of?",
+      "expression": "\\frac{4 - x^2}{|2 - x|}",
+      "answer_type": "text",
+      "correct_answer": "-inf",
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 8,
+      "question": "What is the limit of?",
+      "expression": "\\frac{\\sqrt{2} - x^{3/2}}{x^{3/2} - x^2}",
+      "answer_type": "text",
+      "correct_answer": 0,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 9,
+      "question": "What is the limit of?",
+      "expression": "\\frac{x^{-\\sqrt{3}} - x^{3/2}}{x^{3/2} - x^2}",
+      "answer_type": "text",
+      "correct_answer": 0,
+      "choices": [],
+      "x_value": "\\infty"
+    },
+    {
+      "id": 10,
+      "question": "What is the limit of?",
+      "expression": "\\frac{x^{-\\sqrt{2}} + x^{-\\sqrt{3}}}{x^{2} + x^{-3}}",
+      "answer_type": "text",
+      "correct_answer": 0,
+      "choices": [],
+      "x_value": "\\infty"
+    }
+  ]
+}
