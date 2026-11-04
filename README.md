@@ -1,7 +1,7 @@
 
 # MathTutor – AI-Powered Educational Mobile Application
 
-MathTutor is a cross-platform mobile application designed to help high school students in 11th grade understand mathematical concepts in **Limits of Functions** through theory, interactive exercises, personalized feedback, and gamified learning. It integrates **AI explanations** using GPT-3.5 Turbo and stores user data securely in **Supabase**.
+MathTutor is a cross-platform mobile application designed to help high school students in 11th grade understand mathematical concepts in **Limits of Functions** through theory, interactive exercises, personalized feedback, and gamified learning. It integrates **AI explanations** using GPT-3.5 Turbo, GPT-5-mini and MetaLLama and stores user data securely in **Supabase**.
 
 ---
 
@@ -10,7 +10,7 @@ MathTutor is a cross-platform mobile application designed to help high school st
 - **Front-end**: React Native (with Expo)
 - **Back-end**: Flask (Python)
 - **Database**: Supabase (PostgreSQL)
-- **AI Engine**: OpenAI GPT-3.5 Turbo
+- **AI Engine**: OpenAI GPT-3.5 Turbo, GPT-5-mini, MetaLLama
 - **Authentication**: Supabase Auth with back-end JWT
 - **E2E Testing**: Maestro
 - **Automated Testing**: Pytest (Flask), Jest (React Native)
@@ -19,9 +19,9 @@ MathTutor is a cross-platform mobile application designed to help high school st
 
 ## Features
 
-- Unit-Based structure, where the content is structured into 3 units, divided into theory and practice with 5 exercise lessons/unit.
+- Unit-Based structure, where the content is structured into 4 units, divided into theory and practice with 5 exercise lessons/unit.
 - Custom math exercises using polynomial as a base with AI-powered explanations
-- “Explain My Mistake” feature using GPT-3.5 Turbo
+- “Explain My Mistake” feature using GPT-3.5 Turbo, GPT-5-mini, MetaLLama
 - Point-based (XP) system, lives (hearts), and gamified lesson progression
 - Authentication with Supabase (email, password)
 - Progress tracking per unit and lesson
@@ -155,7 +155,7 @@ MathTutor/
 ├── backend/                   # Flask backend
 │   ├── app.py                 # Main entry point - Signup/Login logic and the rest
 │   ├── exercises.py           # Generation of exercises
-│   ├── ai.py                  # OpenAI integration
+│   ├── ai_name.py             # OpenAI integration
 │   ├── fetch.py               # Fetch Data from JSON files
 ├── README.md
 ```
